@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "letmein",
+    "slug": "letmein",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "letmein"
+}

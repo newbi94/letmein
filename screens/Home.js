@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components/native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { INsApi } from "../api";
+import {
+  useInfiniteQuery,
+  useQuery,
+  useQueryClient,
+} from "@tanstack/react-query";
 
 const Container = styled.View``;
 
@@ -14,9 +20,9 @@ const BarContainer = styled.View`
   margin-top: 20px;
   border-width: 1px;
   flex-direction: row;
-  justify-content: space-between; /* Align items with space between them */
-  align-items: center; /* Center items vertically */
-  padding: 0 20px; /* Add padding for a bit of space around the buttons */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 `;
 
 const Title = styled.Text`
@@ -32,6 +38,24 @@ const InstantBtn = styled.TouchableOpacity`
 const InsBtnSettingBtn = styled.TouchableOpacity``;
 
 const Home = () => {
+  /* const queryClient = useQueryClient();
+
+  const {
+    isLoading: upcomingLoading,
+    data: upcomingData,
+    hasNextPage: upcomingHasNext,
+    fetchNextPage: upcomingFetchNext,
+  } = useInfiniteQuery <
+  MovieResponse >
+  {
+    queryKey: ["INs", "upcoming"],
+    queryFn: INsApi.upcoming,
+    getNextPageParam: (currentPage) => {
+      const nextPage = currentPage.page + 1;
+      return nextPage > currentPage.total_pages ? null : nextPage;
+    },
+  }; */
+
   const navigation = useNavigation();
 
   const goToInsBtnSetting = () => {

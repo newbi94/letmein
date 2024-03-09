@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
 import { Picker } from "@react-native-picker/picker";
-import DropDownPicker from "react-native-dropdown-picker";
 
-const Container = styled.View``;
+const Container = styled.View`
+  background-color: rgba(255, 255, 255, 0.2);
+`;
 
 const TitleContainer = styled.View`
   border-width: 1px;
@@ -18,14 +19,15 @@ const SerachContainer = styled.View`
   border-width: 1px;
   margin-top: 20px;
   flex-direction: row;
-  justify-content: space-between;
 `;
 
 const SelectAreaBox = styled.View`
+  flex: 1;
   border-width: 1px;
 `;
 
 const SearchBox = styled.TextInput`
+  flex: 3;
   border-width: 1px;
 `;
 

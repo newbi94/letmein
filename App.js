@@ -15,4 +15,3 @@ export default function App() {
     </QueryClientProvider>
   );
 }
-//fuxxin challenging today pm 10:23

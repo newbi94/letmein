@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 import Course from "../screens/Course";
 import Home from "../screens/Home";
-import Settings from "../screens/Settings";
+import MyPage from "../screens/MyPage";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,7 +11,7 @@ const Tabs = () => {
     <Tab.Navigator>
       <Tab.Screen name="Course" component={Course} />
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name="MyPage" component={MyPage} />
     </Tab.Navigator>
   );
 };

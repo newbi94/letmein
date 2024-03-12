@@ -64,13 +64,19 @@ const Home = () => {
       params: {},
     });
   };
+  const goToLetmein = () => {
+    navigation.navigate("Stacks", {
+      screen: "Letmein",
+      params: {},
+    });
+  };
   return (
     <Container>
       <TopContainer>
         <Title>let me in !</Title>
       </TopContainer>
       <BarContainer>
-        <InstantBtn>
+        <InstantBtn onPress={goToLetmein}>
           <Ionicons name="radio-button-on-outline" size={30} color="black" />
         </InstantBtn>
         <InsBtnSettingBtn onPress={goToInsBtnSetting}>

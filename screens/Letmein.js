@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import {
-  PermissionsAndroid,
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { PermissionsAndroid, Platform, View } from "react-native";
 import styled from "styled-components/native";
 import Geolocation from "react-native-geolocation-service";
+import NaverMapView, {
+  Circle,
+  Marker,
+  Path,
+  Polyline,
+  Polygon,
+} from "react-native-nmap";
 
 const Container = styled.View``;
 const Title = styled.Text``;

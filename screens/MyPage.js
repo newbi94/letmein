@@ -7,6 +7,10 @@ const LoginBtn = styled.TouchableOpacity``;
 const LoginTxt = styled.Text`
   font-size: 28px;
 `;
+const TestBtn = styled.TouchableOpacity``;
+const TestTxt = styled.Text`
+  font-size: 28px;
+`;
 
 const MyPage = () => {
   const navigation = useNavigation();
@@ -17,11 +21,20 @@ const MyPage = () => {
       params: {},
     });
   };
+  const goToTest = () => {
+    navigation.navigate("Stacks", {
+      screen: "goToTest",
+      params: {},
+    });
+  };
   return (
     <Container>
       <LoginBtn onPress={goToLogin}>
         <LoginTxt>Login</LoginTxt>
       </LoginBtn>
+      <TestBtn onPress={goToTest}>
+        <TestTxt>TestBtn</TestTxt>
+      </TestBtn>
     </Container>
   );
 };

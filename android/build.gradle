@@ -7,9 +7,19 @@ buildscript {
         compileSdkVersion = Integer.parseInt(findProperty('android.compileSdkVersion') ?: '34')
         targetSdkVersion = Integer.parseInt(findProperty('android.targetSdkVersion') ?: '34')
         kotlinVersion = findProperty('android.kotlinVersion') ?: '1.8.10'
-
+//compileSdkVersion = Integer.parseInt(findProperty('android.compileSdkVersion') ?: '34')
         ndkVersion = "25.1.8937393"
     }
+    subprojects { subproject ->
+    afterEvaluate{
+        if((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+            android {
+                compileSdkVersion rootProject.ext.compileSdkVersion
+                buildToolsVersion rootProject.ext.buildToolsVersion
+            }
+        }
+    }
+}
     repositories {
         google()
         mavenCentral()
@@ -32,13 +42,10 @@ allprojects {
             // Android JSC is installed from npm
             url(new File(['node', '--print', "require.resolve('jsc-android/package.json', { paths: [require.resolve('react-native/package.json')] })"].execute(null, rootDir).text.trim(), '../dist'))
         }
-
         google()
-        mavenCentral()
         jcenter()
-        maven { url 'https://www.jitpack.io' }
-         maven {
+        maven {
             url 'https://naver.jfrog.io/artifactory/maven/'
-        } //@@@@@from naver-map
+        }
     }
 }

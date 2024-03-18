@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+import { Dimensions, View } from "react-native";
 import NaverMapView, {
   Circle,
   Marker,
@@ -54,4 +56,5 @@ function Test() {
     </NaverMapView>
   );
 }
+
 export default Test;

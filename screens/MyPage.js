@@ -23,7 +23,7 @@ const MyPage = () => {
   };
   const goToTest = () => {
     navigation.navigate("Stacks", {
-      screen: "goToTest",
+      screen: "Test",
       params: {},
     });
   };

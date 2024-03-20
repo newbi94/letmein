@@ -7,7 +7,6 @@ buildscript {
         compileSdkVersion = Integer.parseInt(findProperty('android.compileSdkVersion') ?: '34')
         targetSdkVersion = Integer.parseInt(findProperty('android.targetSdkVersion') ?: '34')
         kotlinVersion = findProperty('android.kotlinVersion') ?: '1.8.10'
-//compileSdkVersion = Integer.parseInt(findProperty('android.compileSdkVersion') ?: '34')
         ndkVersion = "25.1.8937393"
     }
     subprojects { subproject ->
@@ -45,7 +44,7 @@ allprojects {
         google()
         jcenter()
         maven {
-            url 'https://naver.jfrog.io/artifactory/maven/'
+            url 'https://repository.map.naver.com/archive/maven'
         }
     }
 }

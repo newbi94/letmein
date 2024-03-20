@@ -79,7 +79,6 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
     ndkVersion rootProject.ext.ndkVersion
-    compileSdkVersion 34
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
@@ -144,7 +143,8 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-    implementation 'com.naver.maps:map-sdk:3.17.0'//@@@@from naver-map
+    implementation 'com.naver.maps:map-sdk:3.18.0'//@@@@from naver-map
+    implementation 'com.google.android.gms:play-services-location:21.0.1'//about FusedLocationSource
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
     def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true";
